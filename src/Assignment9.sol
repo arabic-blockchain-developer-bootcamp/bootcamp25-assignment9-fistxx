@@ -14,10 +14,10 @@ contract Assignment9 is Ownable {
 
     // @dev Factory to deploy new instances of `SimpleContract`
     // make only the owner is the one who can call this function
-    function createContract(uint256 _initialValue) external onlyOwner{
+    function createContract() external onlyOwner{
         // deploy new instance of SimpleContract
         // Hint: When you create a new instance, do not forget to pass any arbitrary initial value in the constructor
-        SimpleContract newContract = new SimpleContract(_initialValue);
+        SimpleContract newContract = new SimpleContract(2);
 
 
         // push the new deployed instance to deployedContracts array
